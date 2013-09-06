@@ -14,7 +14,6 @@ results
 node_modules
 npm-debug.log
 
-build
 vagrant
 .lock-wscript
 .DS_Store
