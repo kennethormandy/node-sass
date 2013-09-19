@@ -31,8 +31,8 @@ if (!force) {
 	try {
 		fs.statSync(path.join(__dirname, 'bin', modPath, 'binding.node'));
 		console.log('`'+ modPath+ '` exists; testing');
-		cp.execFile(process.execPath, ['mocha test'], function(err, stdout, stderr) {
-			if (err || stdout !== 'pass' || stderr) {
+		cp.execFile(process.execPath, ['test'], function(err, stdout, stderr) {
+			if (err && err!==null || stdout!=='pass\n' || stderr!=='') {
 				console.log('Problem with the binary; manual build incoming');
 				console.log('Please consider contributing the release binary to node-sass for npm distribution.');
 				build();
