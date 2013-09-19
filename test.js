@@ -1,11 +1,15 @@
 var sass = require('./sass');
 
-var scssStr = '$pink: #D1586C; #navbar { background: $pink; }\n';
-var expectedRender = '#navbar {\n  background: #d1586c; }\n';
+var scssStr = '#navbar {\
+  width: 80%;\
+  height: 23px; }\
+  #navbar ul {\
+    list-style-type: none; }\
+  #navbar li {\
+    float: left;\
+    a {\
+      font-weight: bold; }}';
 
 sass.render(scssStr, function(err, css){
-  if(css === expectedRender) {
-    console.log('pass')
-  }
-});
-
+  console.log(css)
+})
