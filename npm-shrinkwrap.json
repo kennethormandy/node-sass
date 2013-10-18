@@ -1,0 +1,16 @@
+{
+  "name": "node-sass",
+  "version": "0.6.7",
+  "dependencies": {
+    "mocha": {
+      "version": "1.13.0",
+      "from": "mocha@1.13.x",
+      "dependencies": {
+        "commander": {
+          "version": "1.1.0",
+          "from": "commander@1.1.0"
+        }
+      }
+    }
+  }
+}
